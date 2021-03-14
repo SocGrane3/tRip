@@ -16,4 +16,5 @@ public class PlatformMovement : MonoBehaviour
     {
         transform.position = transform.position + (-(transform.forward) * speed * Time.deltaTime);
     }
+
 }
