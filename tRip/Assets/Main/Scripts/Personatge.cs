@@ -20,7 +20,7 @@ public class Personatge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -32,5 +32,25 @@ public class Personatge : MonoBehaviour
     {
         Debug.Log("Mort, position: "+this.gameObject.transform.position.y);
         this.gameObject.transform.position = initialPosition;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("moveBar"))
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (GetComponent<Rigidbody>().isKinematic)
+        {
+            Debug.Log("toca caer");
+
+            GetComponent<Rigidbody>().isKinematic = false;
+            transform.parent = null;
+        }
     }
 }
