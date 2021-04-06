@@ -19,10 +19,10 @@ public class Fly : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rigidbody.drag = 0;
-            rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
+            rigidbody.AddForce(Camera.main.transform.forward * 100 * jumpStrength);
             
         }
 
-        rigidbody.drag = 2;
+        rigidbody.drag = 0;
     }
 }

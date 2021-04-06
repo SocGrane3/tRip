@@ -15,7 +15,7 @@ public class FlyMovement : MonoBehaviour
 
 
          
-      //  rigidbody.velocity = Vector3.Project(rigidbody.velocity, Camera.main.transform.forward);
+       rigidbody.velocity = Vector3.Project(rigidbody.velocity, Camera.main.transform.forward);
 
 
         //   transform.position = transform.position + Camera.main.transform.forward * speed * Time.deltaTime;
@@ -24,7 +24,7 @@ public class FlyMovement : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddForce(Camera.main.transform.forward, ForceMode.Impulse);
+      //  rigidbody.AddForce(Camera.main.transform.forward, ForceMode.Impulse);
         // rigidbody.velocity = Camera.main.transform.forward * speed;
     }
 
