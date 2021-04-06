@@ -10,20 +10,41 @@ public class KochLine : KochGenerator
     public float lerpAmount;
     Vector3[] lerpPosition;
     public float generateMultiplier;
+
+    public int branchs;
+    public bool moreBranches= true;
+
+    [SerializeField]
+    int index = 0;
+    float timeLeft;
+    float timer = 2.0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        timeLeft = timer;
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = true;
         lineRenderer.useWorldSpace = false;
         lineRenderer.loop = true;
         lineRenderer.positionCount = position.Length;
         lineRenderer.SetPositions(position);
+
+
+
+        createBranch();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+        transform.Rotate(0, 0,  +0.1f);
+
+
         if (generationCount != 0)
         {
             for (int i = 0; i < position.Length; i++)
@@ -44,6 +65,12 @@ public class KochLine : KochGenerator
            
         }
 
+       
+
+
+
+
+
 
         if (Input.GetKeyUp(KeyCode.O))
         {
@@ -61,5 +88,41 @@ public class KochLine : KochGenerator
             lineRenderer.SetPositions(position);
             lerpAmount = 0;
         }
+
+
+        
+        if(index < branchs)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+                index++;
+                createBranch();
+                timeLeft = timer;
+            }
+        }
+
+
+
+        
+    }
+
+
+    protected void createBranch()
+    {
+        int yesorno = Random.Range(0, 1);
+        if(yesorno == 1)
+        {
+            KochGenerate(targetPosition, true, generateMultiplier);
+        }
+        else
+        {
+            KochGenerate(targetPosition, true, generateMultiplier);
+        }
+           
+            lerpPosition = new Vector3[position.Length];
+            lineRenderer.positionCount = position.Length;
+            lineRenderer.SetPositions(position);
+            lerpAmount = Random.Range(0.0f,1.0f);
     }
 }
