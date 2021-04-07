@@ -22,9 +22,8 @@
     <list default="true" id="b6dacd74-b332-4f6a-a44d-872a39a7d5e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Assets.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +82,11 @@
       <updated>1615391503171</updated>
       <workItem from="1615391507817" duration="553000" />
       <workItem from="1615825914675" duration="500000" />
+      <workItem from="1616508582187" duration="1000" />
+      <workItem from="1616602146300" duration="1000" />
+      <workItem from="1616602223077" duration="10000" />
+      <workItem from="1616602320108" duration="3000" />
+      <workItem from="1616602411333" duration="58000" />
     </task>
     <servers />
   </component>
