@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\argo\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\argo\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_tRip.-1411524490.00" t="ExcludeRecursive" />
-    <e p="D:\Traball_Sergi\tRip\tRip" t="IncludeRecursive">
+    <e p="C:\Users\argo\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_tRip.-561583113.00" t="ExcludeRecursive" />
+    <e p="C:\Users\argo\Documents\JoanLecha\GITPROJECTS\trip2\tRip\tRip" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Cool Visual Effects - Part 1" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ConstantRotation.cs" t="Include" />
+            <e p="EffectManager.cs" t="Include" />
+          </e>
+        </e>
         <e p="Customizable Skybox" t="Include">
           <e p="Stylized Sky" t="Include">
             <e p="Shaders" t="Include">
@@ -22,12 +28,21 @@
             <e p="Zoom.cs" t="Include" />
           </e>
         </e>
+        <e p="GeneratePlatforms.cs" t="Include" />
+        <e p="LineController.cs" t="Include" />
         <e p="Main" t="Include">
           <e p="Scripts" t="Include">
+            <e p="BeChildOfByCollision.cs" t="Include" />
             <e p="FirstPersonLook.cs" t="Include" />
             <e p="FirstPersonMovement.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
-            <e p="movimientoPerro.cs" t="Include" />
+            <e p="Level3" t="Include">
+              <e p="Fly.cs" t="Include" />
+              <e p="FlyMovement.cs" t="Include" />
+              <e p="KochGenerator.cs" t="Include" />
+              <e p="KochLine.cs" t="Include" />
+            </e>
+            <e p="Perro.cs" t="Include" />
             <e p="Personatge.cs" t="Include" />
             <e p="PlatformMovement.cs" t="Include" />
           </e>
