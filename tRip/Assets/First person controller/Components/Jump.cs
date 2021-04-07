@@ -23,7 +23,7 @@ public class Jump : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Input.GetButtonDown("Jump") && groundCheck.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && groundCheck.isGrounded)
         {
             rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
             Jumped?.Invoke();
