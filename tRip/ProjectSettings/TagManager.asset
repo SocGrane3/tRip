@@ -6,6 +6,7 @@ TagManager:
   tags:
   - platform
   - Ball
+  - Gos
   layers:
   - Default
   - TransparentFX
