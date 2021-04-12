@@ -21,14 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b6dacd74-b332-4f6a-a44d-872a39a7d5e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tRip/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Prefabs/Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Prefabs/Cube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Main/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scenes/Level2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Main/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/layers/trip-_0000_Jugar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/layers/trip-_0000_Jugar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/layers/trip-_0003_BlackSheep-Productions.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/layers/trip-_0003_BlackSheep-Productions.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/layers/trip-_0004_Joan-Lecha-Pau-Marin-Sergi-Granell-.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/layers/trip-_0004_Joan-Lecha-Pau-Marin-Sergi-Granell-.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,9 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/PlatformMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/GeneratePlatforms.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChangeScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Main/Scripts/ITouchable.cs" />
+        <option value="$PROJECT_DIR$/Assets/SelectObject.cs" />
       </list>
     </option>
   </component>
@@ -101,6 +105,9 @@
       <workItem from="1616602411333" duration="58000" />
       <workItem from="1617800640247" duration="4000" />
       <workItem from="1617801720905" duration="3751000" />
+      <workItem from="1618235603472" duration="236000" />
+      <workItem from="1618236187664" duration="120000" />
+      <workItem from="1618236368197" duration="1320000" />
     </task>
     <servers />
   </component>
