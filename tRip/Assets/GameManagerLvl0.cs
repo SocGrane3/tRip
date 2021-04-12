@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManagerLvl0 : MonoBehaviour
 {
-    
     GameObject[] gameObjects;
     // Start is called before the first frame update
     void Start()
     {
         gameObjects = GameObject.FindGameObjectsWithTag("Selectable");
-        foreach(GameObject g in gameObjects)
+        foreach (GameObject g in gameObjects)
         {
             g.AddComponent<Outline>();
+            g.GetComponent<Outline>().OutlineColor = Color.magenta;
             g.GetComponent<Outline>().enabled = false;
         }
     }
@@ -20,6 +20,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 }
