@@ -24,10 +24,13 @@ public class PickAndThrow : MonoBehaviour
         {
             RaycastHit hit;
             Ray directionRay = new Ray(transform.position, transform.forward);
-            if (Physics.Raycast(directionRay, out hit, 2f))
+            Debug.DrawRay(transform.position, directionRay.direction, Color.red, 40f, false);
+            if (Physics.Raycast(directionRay, out hit, 10f))
             {
                 if (hit.collider.tag == "Gos")
                 {
+
+                    Debug.Log("dog detect");
                     doggy = hit.collider.GetComponent<Perro>();
 
                     if (doggy.pilotaCatch)

@@ -20,13 +20,19 @@ public class GosPickBall : MonoBehaviour
     {
         RaycastHit hit;
         Ray directionRay = new Ray(transform.position, transform.forward);
+        Debug.DrawLine(transform.position, transform.forward, Color.red, 10000000);
         if (Physics.Raycast(directionRay, out hit, 2f))
         {
-            if (hit.collider.tag == "Ball")
+
+            if (hit.collider.CompareTag("Ball"))
             {
+
+                Debug.Log("ball detect");
+
                 carryObject = true;
                 if (carryObject)
                 {
+                    gameObject.GetComponent<Perro>().pilotaCatch = true;
                     item = hit.collider.gameObject;
                     item.transform.SetParent(boca);
                     item.gameObject.transform.position = boca.position;
