@@ -5,5 +5,5 @@ using UnityEngine;
 public interface ITouchable
 {
     // Start is called before the first frame update
-    void Selector();
+    void onClick();
 }
