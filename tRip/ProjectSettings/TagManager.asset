@@ -4,14 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - platform
-<<<<<<< HEAD
-  - FinalColl
-  - Selectable
-=======
   - Ball
   - Gos
->>>>>>> movimientoPerro
+  - Selectable
   layers:
   - Default
   - TransparentFX
