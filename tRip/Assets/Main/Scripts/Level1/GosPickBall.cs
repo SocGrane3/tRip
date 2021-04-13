@@ -24,7 +24,7 @@ public class GosPickBall : MonoBehaviour
         if (Physics.Raycast(directionRay, out hit, 2f))
         {
 
-            if (hit.collider.CompareTag("Ball"))
+            if (hit.collider.CompareTag("Selectable"))
             {
 
                 Debug.Log("ball detect");

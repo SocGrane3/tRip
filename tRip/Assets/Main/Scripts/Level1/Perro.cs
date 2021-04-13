@@ -10,7 +10,7 @@ public class Perro : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform pilota;
     [SerializeField] private float stopDistance;
-    private Animation animation;
+    [SerializeField] private Animation animation;
     public bool pilotaCatch, corre;
 
     // Start is called before the first frame update
@@ -38,8 +38,8 @@ public class Perro : MonoBehaviour
     {
         navigation.destination = player.position;
         navigation.stoppingDistance = stopDistance;
-        if(navigation.remainingDistance < stopDistance) animation.Play();
-        else animation.Play();
+        /*if(navigation.remainingDistance < stopDistance) animation.Play();
+        else animation.Play();*/
         corre = navigation.remainingDistance < stopDistance;
     }
 }

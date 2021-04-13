@@ -536,6 +536,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8322771408989076988, guid: 047b08ebf35c87b45b0abd68d2da3259,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.637
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322771408989076988, guid: 047b08ebf35c87b45b0abd68d2da3259,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.073
+      objectReference: {fileID: 0}
     - target: {fileID: 8324377905645995025, guid: 047b08ebf35c87b45b0abd68d2da3259,
         type: 3}
       propertyPath: m_Name
@@ -628,6 +638,12 @@ Transform:
   m_Father: {fileID: 1084261983}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &760294836 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8322771408989076988, guid: 047b08ebf35c87b45b0abd68d2da3259,
+    type: 3}
+  m_PrefabInstance: {fileID: 686626013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &788322271
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,9 +815,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carryObject: 0
   isThrowable: 0
-  hand: {fileID: 0}
+  hand: {fileID: 760294836}
   item: {fileID: 0}
-  throwForce: 0
+  throwForce: 1
+  dog: {fileID: 1084261974}
 --- !u!1001 &1496628012
 PrefabInstance:
   m_ObjectHideFlags: 0
