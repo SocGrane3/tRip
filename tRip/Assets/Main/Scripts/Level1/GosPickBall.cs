@@ -41,12 +41,5 @@ public class GosPickBall : MonoBehaviour
                 }
             }
         }
-
-        if (!carryObject && item != null)
-        {
-            boca.DetachChildren();
-            item.GetComponent<Rigidbody>().isKinematic = false;
-            item.GetComponent<Rigidbody>().useGravity = true;
-        }
     }
 }

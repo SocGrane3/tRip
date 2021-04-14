@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickAndThrow : MonoBehaviour
 {
 
-    public bool carryObject, isThrowable;
+    public bool carryObject;
     public Transform hand;
     public GameObject item;
     public float throwForce;
@@ -40,12 +40,17 @@ public class PickAndThrow : MonoBehaviour
                         dog.GetComponent<GosPickBall>().carryObject = false;
 
                         carryObject = true;
-                        isThrowable = true;
                         if (carryObject)
                         {
                             item = dog.GetComponent<GosPickBall>().item;
+
+                            Debug.Log("pilota1: " + item.transform.localPosition+ "\n hand1: " + hand.position);
+
                             item.transform.SetParent(hand);
                             item.gameObject.transform.position = hand.position;
+
+                            Debug.Log("pilota2: " + item.transform.localPosition + "\n hand2: " + hand.position);
+
                             item.GetComponent<Rigidbody>().isKinematic = true;
                             item.GetComponent<Rigidbody>().useGravity = false;
                         }
@@ -57,7 +62,6 @@ public class PickAndThrow : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             carryObject = false;
-            isThrowable = false;
         }
 
         if (!carryObject && item != null)
@@ -65,17 +69,20 @@ public class PickAndThrow : MonoBehaviour
             hand.DetachChildren();
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.GetComponent<Rigidbody>().useGravity = true;
+            item = null;
             doggy.pilotaCatch = false;
         }
 
         if (Input.GetMouseButton(0))
         {
-            if (isThrowable)
+            if (carryObject)
             {
                 hand.DetachChildren();
                 item.GetComponent<Rigidbody>().isKinematic = false;
                 item.GetComponent<Rigidbody>().useGravity = true;
-                item.GetComponent<Rigidbody>().AddRelativeForce(hand.forward * throwForce);
+                item.GetComponent<Rigidbody>().AddRelativeForce(transform.forward * throwForce);
+                carryObject = false;
+                item = null;
                 doggy.pilotaCatch = false;
             }
         }
