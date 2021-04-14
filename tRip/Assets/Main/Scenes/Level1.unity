@@ -890,6 +890,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9147801292804563774, guid: 7b4fc73d4fc62664a88d947df04282bb,
+        type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9147801292804563904, guid: 7b4fc73d4fc62664a88d947df04282bb,
         type: 3}
       propertyPath: pilota

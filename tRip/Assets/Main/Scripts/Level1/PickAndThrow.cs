@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickAndThrow : MonoBehaviour
+public class PickAndThrow : MonoBehaviour, ITouchable
 {
 
     public bool carryObject;
@@ -10,6 +10,11 @@ public class PickAndThrow : MonoBehaviour
     public GameObject item;
     public float throwForce;
     public GameObject dog;
+
+    public void Selector()
+    {
+        throw new System.NotImplementedException();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,26 +40,18 @@ public class PickAndThrow : MonoBehaviour
 
                     Debug.Log("dog detect");
 
-                    if (doggy.pilotaCatch)
+                    dog.GetComponent<GosPickBall>().carryObject = false;
+
+                    carryObject = true;
+                    if (carryObject)
                     {
-                        dog.GetComponent<GosPickBall>().carryObject = false;
-
-                        carryObject = true;
-                        if (carryObject)
-                        {
-                            item = dog.GetComponent<GosPickBall>().item;
-
-                            Debug.Log("pilota1: " + item.transform.localPosition+ "\n hand1: " + hand.position);
-
-                            item.transform.SetParent(hand);
-                            item.gameObject.transform.position = hand.position;
-
-                            Debug.Log("pilota2: " + item.transform.localPosition + "\n hand2: " + hand.position);
-
-                            item.GetComponent<Rigidbody>().isKinematic = true;
-                            item.GetComponent<Rigidbody>().useGravity = false;
-                        }
+                        item = hit.collider.gameObject;
+                        item.transform.SetParent(hand);
+                        item.gameObject.transform.position = hand.position;
+                        item.GetComponent<Rigidbody>().isKinematic = true;
+                        item.GetComponent<Rigidbody>().useGravity = false;
                     }
+                    
                 }
             }
         }
@@ -80,7 +77,7 @@ public class PickAndThrow : MonoBehaviour
                 hand.DetachChildren();
                 item.GetComponent<Rigidbody>().isKinematic = false;
                 item.GetComponent<Rigidbody>().useGravity = true;
-                item.GetComponent<Rigidbody>().AddRelativeForce(transform.forward * throwForce);
+                item.GetComponent<Rigidbody>().AddForce(this.transform.forward * throwForce);
                 carryObject = false;
                 item = null;
                 doggy.pilotaCatch = false;
