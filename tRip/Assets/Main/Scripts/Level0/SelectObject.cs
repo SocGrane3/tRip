@@ -48,5 +48,9 @@ public class SelectObject : MonoBehaviour
                 
             }
         }
+        else {
+            ultimoObjeto.GetComponent<Outline>().enabled = false;
+            puntero.color = Color.white;
+        }
     }
 }
