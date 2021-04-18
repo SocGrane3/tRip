@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 114497868231759342}
   - component: {fileID: 114762042097486276}
   - component: {fileID: 4323785915569144699}
+  - component: {fileID: -5938849571997269648}
   m_Layer: 0
   m_Name: First person controllerLevel2
   m_TagString: Untagged
@@ -376,3 +377,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75686ea27aac30c4dbdf816c9e1f93d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5938849571997269648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773623360729482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbfdbc2b66598743adfc6bcc6784f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carryObject: 0
+  isThrowable: 0
+  hand: {fileID: 0}
+  item: {fileID: 0}
+  throwForce: 0

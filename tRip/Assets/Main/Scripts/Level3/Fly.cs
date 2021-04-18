@@ -16,7 +16,7 @@ public class Fly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rigidbody.drag = 0;
             rigidbody.AddForce(Camera.main.transform.forward * 100 * jumpStrength);
