@@ -911,6 +911,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5728931538957268704, guid: 047b08ebf35c87b45b0abd68d2da3259,
+        type: 3}
+      propertyPath: numScena
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8304776605146383671, guid: 047b08ebf35c87b45b0abd68d2da3259,
         type: 3}
       propertyPath: m_UseGravity
