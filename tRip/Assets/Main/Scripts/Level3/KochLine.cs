@@ -17,7 +17,7 @@ public class KochLine : KochGenerator
     [SerializeField]
     int index = 0;
     float timeLeft;
-    float timer = 2.0f;
+    float timer = .1f;
 
 
     // Start is called before the first frame update
@@ -42,6 +42,7 @@ public class KochLine : KochGenerator
     {
 
 
+        
         transform.Rotate(0, 0,  +0.1f);
 
 
