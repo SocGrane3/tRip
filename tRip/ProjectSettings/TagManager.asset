@@ -7,6 +7,10 @@ TagManager:
   - Ball
   - Gos
   - Selectable
+  - Pantalla2
+  - Pantalla1
+  - Audio
+  - Smoke
   layers:
   - Default
   - TransparentFX
