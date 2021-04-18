@@ -24,7 +24,7 @@ public class GosPickBall : MonoBehaviour
         if (Physics.Raycast(directionRay, out hit, 2f))
         {
 
-            if (hit.collider.CompareTag("Ball"))
+            if (hit.collider.CompareTag("Selectable"))
             {
 
                 Debug.Log("ball detect");
@@ -40,13 +40,6 @@ public class GosPickBall : MonoBehaviour
                     item.GetComponent<Rigidbody>().useGravity = false;
                 }
             }
-        }
-
-        if (!carryObject && item != null)
-        {
-            boca.DetachChildren();
-            item.GetComponent<Rigidbody>().isKinematic = false;
-            item.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

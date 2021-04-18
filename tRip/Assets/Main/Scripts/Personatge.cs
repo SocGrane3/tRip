@@ -1,20 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Personatge : MonoBehaviour
 {
-    private Vector3 initialPosition;
+    private string[] scenas = { "Level2", "Level3"};
+    public int numScena;
 
     // Start is called before the first frame update
     void Start()
     {
 
-    }
-
-    private void Awake()
-    {
-        initialPosition = this.gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -25,12 +22,13 @@ public class Personatge : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (this.gameObject.transform.position.y < -10) mort();
+        if (this.gameObject.transform.position.y < -10) nextScene();
     }
 
-    public void mort()
+    public void nextScene()
     {
-        Debug.Log("Mort, position: "+this.gameObject.transform.position.y);
-        this.gameObject.transform.position = initialPosition;
+        numScena++;
+        Debug.Log("change scene num" + numScena);
+        SceneManager.LoadScene(numScena);
     }
 }

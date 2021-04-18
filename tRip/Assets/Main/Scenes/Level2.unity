@@ -192,6 +192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea9b03243e47d94587fff56d0bb3d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plataforma: {fileID: 0}
+  spawn: 0
+  tiempoAparicion: 1
+  lastPlatformX: 0
+  rangeInit: 0
+  rangeFin: 0
 --- !u!64 &545120529
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -273,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 950893501227908493, guid: a5d0c50c674a6a44482c9f9aaaf5b05c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 950893501227908493, guid: a5d0c50c674a6a44482c9f9aaaf5b05c,
         type: 3}
@@ -351,6 +357,11 @@ PrefabInstance:
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323785915569144699, guid: 11aaea5348574644a9eb4f4504fcce3f,
+        type: 3}
+      propertyPath: numScena
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
@@ -503,6 +514,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea9b03243e47d94587fff56d0bb3d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plataforma: {fileID: 0}
+  spawn: 0
+  tiempoAparicion: 1
+  lastPlatformX: 0
+  rangeInit: 0
+  rangeFin: 0
 --- !u!1 &1502837642
 GameObject:
   m_ObjectHideFlags: 0
