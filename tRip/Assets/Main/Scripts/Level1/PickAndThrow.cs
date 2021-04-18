@@ -16,6 +16,11 @@ public class PickAndThrow : MonoBehaviour, ITouchable
         throw new System.NotImplementedException();
     }
 
+    public void onClick()
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
