@@ -11,6 +11,8 @@ TagManager:
   - Pantalla1
   - Audio
   - Smoke
+  - FinalColl
+  - Platform
   layers:
   - Default
   - TransparentFX
