@@ -36,6 +36,10 @@ public class SelectObject : MonoBehaviour
                     objeto.GetComponent<ITouchable>().onClick();
                     
                 }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    objeto.GetComponent<ITouchable>().onClick();
+                }
                 
             }
             else
@@ -49,7 +53,7 @@ public class SelectObject : MonoBehaviour
             }
         }
         else {
-            ultimoObjeto.GetComponent<Outline>().enabled = false;
+            if(ultimoObjeto != null) ultimoObjeto.GetComponent<Outline>().enabled = false;
             puntero.color = Color.white;
         }
     }
