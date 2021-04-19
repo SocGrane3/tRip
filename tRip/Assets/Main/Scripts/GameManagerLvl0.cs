@@ -8,7 +8,7 @@ public class GameManagerLvl0 : MonoBehaviour
     GameObject[] gameObjects;
     private GameObject pantalla1Object, pantalla2Object;
     private AudioSource audioSource;
-
+    [SerializeField] private Animator animator;
     private GameObject pill;
     // Start is called before the first frame update
     void Start()
@@ -60,8 +60,10 @@ public class GameManagerLvl0 : MonoBehaviour
 
         if (canTakePill)
         {
+            
             if (pill.GetComponent<TakeTrip>() == null)
             {
+                animator.SetBool("CanFLy", true);
                 pill.AddComponent<TakeTrip>();
             }
         }

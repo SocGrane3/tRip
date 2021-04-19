@@ -36,6 +36,11 @@ public class SelectObject : MonoBehaviour
                     objeto.GetComponent<ITouchable>().onClick();
                     
                 }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    objeto.GetComponent<ITouchable>().onClick();
+                }
                 
             }
             else
