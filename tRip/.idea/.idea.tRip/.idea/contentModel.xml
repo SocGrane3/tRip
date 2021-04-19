@@ -354,7 +354,12 @@
             <e p="GameManager.cs" t="Include" />
             <e p="GameManagerLvl0.cs" t="Include" />
             <e p="GeneratePlatforms.cs" t="Include" />
-            <e p="ITouchable.cs" t="Include" />
+            <e p="Level0" t="Include">
+              <e p="ITouchable.cs" t="Include" />
+              <e p="Pantalla.cs" t="Include" />
+              <e p="Pantalla2.cs" t="Include" />
+              <e p="SelectObject.cs" t="Include" />
+            </e>
             <e p="Level1" t="Include">
               <e p="GosPickBall.cs" t="Include" />
               <e p="Perro.cs" t="Include" />
@@ -371,10 +376,9 @@
             <e p="MenuButtonController.cs" t="Include" />
             <e p="Personatge.cs" t="Include" />
             <e p="PlatformMovement.cs" t="Include" />
-            <e p="SelectObject.cs" t="Include" />
           </e>
         </e>
-        <e p="Pantalla.cs" t="Include" />
+        <e p="TakeTrip.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

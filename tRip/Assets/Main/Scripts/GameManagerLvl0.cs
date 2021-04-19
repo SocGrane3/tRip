@@ -8,6 +8,8 @@ public class GameManagerLvl0 : MonoBehaviour
     GameObject[] gameObjects;
     private GameObject pantalla1Object, pantalla2Object;
     private AudioSource audioSource;
+
+    private GameObject pill;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class GameManagerLvl0 : MonoBehaviour
         canTakePill = false;
         pantalla2Object = GameObject.FindGameObjectWithTag("Pantalla2");
         pantalla1Object = GameObject.FindGameObjectWithTag("Pantalla1");
+        pill = GameObject.FindGameObjectWithTag("tripp").transform.gameObject;
         audioSource = GameObject.FindGameObjectWithTag("Audio").transform.gameObject.GetComponent<AudioSource>();
 
     }
@@ -51,9 +54,15 @@ public class GameManagerLvl0 : MonoBehaviour
             {
                 StartCoroutine(coFunc());
                 audioSource.Play();
-                canTakePill = true;
                 
-                Debug.Log("Can take pill");
+            }
+        }
+
+        if (canTakePill)
+        {
+            if (pill.GetComponent<TakeTrip>() == null)
+            {
+                pill.AddComponent<TakeTrip>();
             }
         }
         
@@ -62,5 +71,6 @@ public class GameManagerLvl0 : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         audioSource.clip = null;
+        canTakePill = true;
     }
 }
