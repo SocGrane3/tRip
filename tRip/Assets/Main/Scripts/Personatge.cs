@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Personatge : MonoBehaviour
 {
-    private string[] scenas = { "Level2", "Level3"};
     public int numScena;
 
     // Start is called before the first frame update
@@ -27,7 +26,6 @@ public class Personatge : MonoBehaviour
 
     public void nextScene()
     {
-        numScena++;
         Debug.Log("change scene num" + numScena);
         SceneManager.LoadScene(numScena);
     }
