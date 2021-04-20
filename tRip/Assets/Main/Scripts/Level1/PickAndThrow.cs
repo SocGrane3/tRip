@@ -43,31 +43,31 @@ public class PickAndThrow : MonoBehaviour, ITouchable
     {
         Perro doggy = dog.GetComponent<Perro>();
 
-        if (Input.GetMouseButton(1))
+        if (carryObject)
         {
-            carryObject = false;
-        }
+            if (Input.GetMouseButton(0) && throwForce < 700)
+            {
+                throwForce += 3;
+            }
 
-        if (!carryObject && !doggy.pilotaCatch)
-        {
-            hand.DetachChildren();
-            this.GetComponent<Rigidbody>().isKinematic = false;
-            this.GetComponent<Rigidbody>().useGravity = true;
-            doggy.pilotaCatch = false;
-        }
-
-        if (Input.GetMouseButton(0))
-        {
-            if (carryObject)
+            if (Input.GetMouseButtonUp(0))
             {
                 hand.DetachChildren();
                 this.GetComponent<Rigidbody>().isKinematic = false;
                 this.GetComponent<Rigidbody>().useGravity = true;
-                Debug.Log("HTF "+Camera.main.transform.forward);
                 this.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * throwForce);
                 carryObject = false;
                 doggy.pilotaCatch = false;
+                throwForce = 0;
             }
+        }
+
+        if(transform.position.x > 50 ||
+            transform.position.x < -50 ||
+            transform.position.y > 50 ||
+            transform.position.y < -50)
+        {
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
 }
