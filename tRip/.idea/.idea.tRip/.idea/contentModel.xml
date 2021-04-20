@@ -359,6 +359,7 @@
               <e p="Pantalla.cs" t="Include" />
               <e p="Pantalla2.cs" t="Include" />
               <e p="SelectObject.cs" t="Include" />
+              <e p="TakeTrip.cs" t="Include" />
             </e>
             <e p="Level1" t="Include">
               <e p="GosPickBall.cs" t="Include" />
@@ -378,7 +379,6 @@
             <e p="PlatformMovement.cs" t="Include" />
           </e>
         </e>
-        <e p="TakeTrip.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

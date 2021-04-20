@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class TakeTrip : MonoBehaviour, ITouchable
 {
+    private Animator animator;
+
+    private int i;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,7 +23,13 @@ public class TakeTrip : MonoBehaviour, ITouchable
 
     public void onClick()
     {
-        Debug.Log("Changed");
-        SceneManager.LoadScene("Level1");
+        i++;
+        
+        if (i <= 2)
+        {
+            Debug.Log("Changed");
+            SceneManager.LoadScene("Level1");    
+        }
+        animator.SetBool("CanFLy", true);
     }
 }

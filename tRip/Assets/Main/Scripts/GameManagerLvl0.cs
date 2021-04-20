@@ -63,8 +63,8 @@ public class GameManagerLvl0 : MonoBehaviour
             
             if (pill.GetComponent<TakeTrip>() == null)
             {
-                animator.SetBool("CanFLy", true);
                 pill.AddComponent<TakeTrip>();
+                
             }
         }
         
