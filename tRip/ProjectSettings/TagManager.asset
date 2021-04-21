@@ -11,6 +11,7 @@ TagManager:
   - Pantalla1
   - Audio
   - Smoke
+  - mano
   layers:
   - Default
   - TransparentFX

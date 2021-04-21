@@ -22,17 +22,16 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
         dog.GetComponent<GosPickBall>().carryObject = false;
 
-        carryObject = true;
-        if (carryObject)
-        {   
-            GetComponentInParent<Animator>().SetTrigger("pick");
-            this.transform.SetParent(handGuide);
-            this.gameObject.transform.position = handGuide.position;
-            this.GetComponent<Rigidbody>().isKinematic = true;
-            this.GetComponent<Rigidbody>().useGravity = false;
-        }
-    }
+        hand.GetComponentInParent<Animator>().SetTrigger("pick");
+        this.transform.SetParent(handGuide);
+        this.gameObject.transform.position = handGuide.position;
+        this.GetComponent<Rigidbody>().isKinematic = true;
+        this.GetComponent<Rigidbody>().useGravity = false;
 
+        Debug.Log("pick"+"\nparent: "+this.transform.parent+"kinematic: "+ this.GetComponent<Rigidbody>().isKinematic+"Gravety: "+ this.GetComponent<Rigidbody>().useGravity);
+
+        carryObject = true;
+    }  
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +45,9 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
         if (carryObject)
         {
+
+            Debug.Log("carryobject "+ carryObject+" touchCount: "+Input.touchCount);
+
             if (Input.GetMouseButton(0) && throwForce < 700)
             {
                 throwForce += 3;
@@ -54,7 +56,7 @@ public class PickAndThrow : MonoBehaviour, ITouchable
             if (Input.GetMouseButtonUp(0))
             {
 
-                GetComponentInParent<Animator>().SetTrigger("throw");
+                hand.GetComponentInParent<Animator>().SetTrigger("throw");
                 handGuide.DetachChildren();
                 this.GetComponent<Rigidbody>().isKinematic = false;
                 this.GetComponent<Rigidbody>().useGravity = true;
@@ -62,6 +64,8 @@ public class PickAndThrow : MonoBehaviour, ITouchable
                 carryObject = false;
                 doggy.pilotaCatch = false;
                 throwForce = 0;
+
+                Debug.Log("throw" + "\nparent: " + this.transform.parent + "kinematic: " + this.GetComponent<Rigidbody>().isKinematic + "Gravety: " + this.GetComponent<Rigidbody>().useGravity);
             }
         }
 
@@ -73,4 +77,7 @@ public class PickAndThrow : MonoBehaviour, ITouchable
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
+
+    
+
 }
