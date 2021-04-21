@@ -6,9 +6,10 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 {
 
     public bool carryObject;
-    public Transform hand;
+    public GameObject hand;
     public float throwForce;
     public GameObject dog;
+    private Transform handGuide;
 
     public void Selector()
     {
@@ -23,10 +24,10 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
         carryObject = true;
         if (carryObject)
-        {
-            
-            this.transform.SetParent(hand);
-            this.gameObject.transform.position = hand.position;
+        {   
+            GetComponentInParent<Animator>().SetTrigger("pick");
+            this.transform.SetParent(handGuide);
+            this.gameObject.transform.position = handGuide.position;
             this.GetComponent<Rigidbody>().isKinematic = true;
             this.GetComponent<Rigidbody>().useGravity = false;
         }
@@ -35,7 +36,7 @@ public class PickAndThrow : MonoBehaviour, ITouchable
     // Start is called before the first frame update
     void Start()
     {
-
+        handGuide = hand.transform;
     }
 
     // Update is called once per frame
@@ -52,7 +53,9 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
             if (Input.GetMouseButtonUp(0))
             {
-                hand.DetachChildren();
+
+                GetComponentInParent<Animator>().SetTrigger("throw");
+                handGuide.DetachChildren();
                 this.GetComponent<Rigidbody>().isKinematic = false;
                 this.GetComponent<Rigidbody>().useGravity = true;
                 this.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * throwForce);
