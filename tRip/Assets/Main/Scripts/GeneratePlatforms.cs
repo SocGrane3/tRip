@@ -37,8 +37,8 @@ public class GeneratePlatforms : MonoBehaviour
         while (spawn)
         {
             yield return new WaitForSeconds(tiempoAparicion);
-            SpawnPlatform(-30, -10 );
-            SpawnPlatform(10, 30 );
+            SpawnPlatform(-30, -5 );
+            SpawnPlatform(5, 30 );
         }
 
         
