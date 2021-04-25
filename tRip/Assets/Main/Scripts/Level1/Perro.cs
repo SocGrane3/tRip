@@ -30,14 +30,14 @@ public class Perro : MonoBehaviour
     public void seguirPilota()
     {
         navigation.destination = pilota.position;
-        animation.SetTrigger("run");
+        animation.SetBool("run", true);
     }
 
     public void irAJugador()
     {
         navigation.destination = player.position;
         navigation.stoppingDistance = stopDistance;
-        if (navigation.remainingDistance < stopDistance) animation.SetTrigger("wait");
-        else animation.SetTrigger("run");
+        if (navigation.remainingDistance < stopDistance-0.1) animation.SetBool("run", false);
+        else animation.SetBool("run", true);
     }
 }
