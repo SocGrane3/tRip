@@ -37,7 +37,7 @@ public class Perro : MonoBehaviour
     {
         navigation.destination = player.position;
         navigation.stoppingDistance = stopDistance;
-        if (navigation.remainingDistance < stopDistance-0.1) animation.SetBool("run", false);
+        if (navigation.remainingDistance < stopDistance-0.22) animation.SetBool("run", false);
         else animation.SetBool("run", true);
     }
 }

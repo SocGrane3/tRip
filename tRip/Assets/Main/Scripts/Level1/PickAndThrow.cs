@@ -27,12 +27,14 @@ public class PickAndThrow : MonoBehaviour, ITouchable
             dog.GetComponent<Animator>().SetTrigger("soltar");
         }
 
+        dog.GetComponent<Perro>().pilotaCatch = true;
         hand.SetTrigger("pick");
         this.transform.SetParent(handGuide);
         this.transform.localScale = handGuide.localScale;
         this.gameObject.transform.position = handGuide.position;
         this.GetComponent<Rigidbody>().isKinematic = true;
         this.GetComponent<Rigidbody>().useGravity = false;
+        dog.GetComponent<AudioSource>().Play();
 
         Debug.Log("pick"+"\nparent: "+this.transform.parent+"kinematic: "+ this.GetComponent<Rigidbody>().isKinematic+"Gravety: "+ this.GetComponent<Rigidbody>().useGravity);
 
@@ -62,6 +64,7 @@ public class PickAndThrow : MonoBehaviour, ITouchable
             {
                 rotationHand.SetTrigger("soltar");
                 hand.SetTrigger("throw");
+                dog.GetComponent<AudioSource>().Play();
                 handGuide.DetachChildren();
                 transform.localScale = scaleOriginal;
                 this.GetComponent<Rigidbody>().isKinematic = false;
@@ -70,6 +73,7 @@ public class PickAndThrow : MonoBehaviour, ITouchable
                 carryObject = false;
                 doggy.pilotaCatch = false;
                 throwForce = 0;
+                dog.GetComponent<AudioSource>().Play(2);
 
                 Debug.Log("throw" + "\nparent: " + this.transform.parent + "kinematic: " + this.GetComponent<Rigidbody>().isKinematic + "Gravety: " + this.GetComponent<Rigidbody>().useGravity);
             }
