@@ -13,6 +13,7 @@ TagManager:
   - Smoke
   - FinalColl
   - Platform
+  - tripp
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - PostProcessing
   - 
   - 
   - 
