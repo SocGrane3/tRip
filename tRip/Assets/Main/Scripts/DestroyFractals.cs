@@ -43,7 +43,8 @@ public class DestroyFractals : MonoBehaviour
             v.profile.TryGet<ChromaticAberration>(out ca);
             v.profile.TryGet<Bloom>(out b);
             b.intensity.value += 150;
-            ca.intensity.value += 0.2f;
+            ca.intensity.value += 0.4f;
+            vign.intensity.value += 0.05f;
 
         }
         else
