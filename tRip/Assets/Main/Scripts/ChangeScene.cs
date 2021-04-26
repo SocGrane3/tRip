@@ -10,7 +10,7 @@ public class ChangeScene : MonoBehaviour
     
     public void changeScene()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(1);
         Debug.Log("Entered the game");
     }
 
@@ -23,7 +23,7 @@ public class ChangeScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
