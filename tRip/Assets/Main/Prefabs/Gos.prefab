@@ -2074,6 +2074,7 @@ GameObject:
   - component: {fileID: 9147801292804563772}
   - component: {fileID: 9147801292804563904}
   - component: {fileID: 9147801292804563774}
+  - component: {fileID: 7170122348720024402}
   m_Layer: 0
   m_Name: Gos
   m_TagString: Gos
@@ -2224,7 +2225,10 @@ MonoBehaviour:
   navigation: {fileID: 0}
   player: {fileID: 0}
   pilota: {fileID: 0}
+  stopDistance: 0
+  animation: {fileID: 0}
   pilotaCatch: 0
+  corre: 0
 --- !u!195 &9147801292804563774
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2247,6 +2251,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &7170122348720024402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228900184937385144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8312345041843190565
 GameObject:
   m_ObjectHideFlags: 0

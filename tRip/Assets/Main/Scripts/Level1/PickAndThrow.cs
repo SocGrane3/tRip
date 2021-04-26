@@ -7,7 +7,6 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
     public bool carryObject;
     public Transform hand;
-    public GameObject item;
     public float throwForce;
     public GameObject dog;
 
@@ -18,7 +17,19 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
     public void onClick()
     {
+        Debug.Log("ball detect man");
 
+        dog.GetComponent<GosPickBall>().carryObject = false;
+
+        carryObject = true;
+        if (carryObject)
+        {
+            
+            this.transform.SetParent(hand);
+            this.gameObject.transform.position = hand.position;
+            this.GetComponent<Rigidbody>().isKinematic = true;
+            this.GetComponent<Rigidbody>().useGravity = false;
+        }
     }
 
     // Start is called before the first frame update
@@ -30,63 +41,33 @@ public class PickAndThrow : MonoBehaviour, ITouchable
     // Update is called once per frame
     void Update()
     {
-
         Perro doggy = dog.GetComponent<Perro>();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (carryObject)
         {
-            RaycastHit hit;
-            Ray directionRay = new Ray(transform.position, transform.forward);
-            Debug.DrawRay(transform.position, directionRay.direction, Color.red, 2f, false);
-            if (Physics.Raycast(directionRay, out hit, 2f))
+            if (Input.GetMouseButton(0) && throwForce < 700)
             {
-                if (hit.collider.tag == "Selectable")
-                {
-
-                    Debug.Log("dog detect");
-
-                    dog.GetComponent<GosPickBall>().carryObject = false;
-
-                    carryObject = true;
-                    if (carryObject)
-                    {
-                        item = hit.collider.gameObject;
-                        item.transform.SetParent(hand);
-                        item.gameObject.transform.position = hand.position;
-                        item.GetComponent<Rigidbody>().isKinematic = true;
-                        item.GetComponent<Rigidbody>().useGravity = false;
-                    }
-                    
-                }
+                throwForce += 3;
             }
-        }
 
-        if (Input.GetMouseButton(1))
-        {
-            carryObject = false;
-        }
-
-        if (!carryObject && item != null)
-        {
-            hand.DetachChildren();
-            item.GetComponent<Rigidbody>().isKinematic = false;
-            item.GetComponent<Rigidbody>().useGravity = true;
-            item = null;
-            doggy.pilotaCatch = false;
-        }
-
-        if (Input.GetMouseButton(0))
-        {
-            if (carryObject)
+            if (Input.GetMouseButtonUp(0))
             {
                 hand.DetachChildren();
-                item.GetComponent<Rigidbody>().isKinematic = false;
-                item.GetComponent<Rigidbody>().useGravity = true;
-                item.GetComponent<Rigidbody>().AddForce(this.transform.forward * throwForce);
+                this.GetComponent<Rigidbody>().isKinematic = false;
+                this.GetComponent<Rigidbody>().useGravity = true;
+                this.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * throwForce);
                 carryObject = false;
-                item = null;
                 doggy.pilotaCatch = false;
+                throwForce = 0;
             }
+        }
+
+        if(transform.position.x > 50 ||
+            transform.position.x < -50 ||
+            transform.position.y > 50 ||
+            transform.position.y < -50)
+        {
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
 }

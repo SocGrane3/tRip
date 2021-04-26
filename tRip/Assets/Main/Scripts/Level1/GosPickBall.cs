@@ -27,7 +27,7 @@ public class GosPickBall : MonoBehaviour
             if (hit.collider.CompareTag("Selectable"))
             {
 
-                Debug.Log("ball detect");
+                Debug.Log("ball detect dog");
 
                 carryObject = true;
                 if (carryObject)
