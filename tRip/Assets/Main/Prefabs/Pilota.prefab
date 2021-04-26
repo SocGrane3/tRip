@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 724422928167888748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.88, y: 51.84, z: -74.94}
-  m_LocalScale: {x: 0.0632909, y: 0.06329092, z: 0.06329092}
+  m_LocalScale: {x: 0.026126279, y: 0.026126279, z: 0.026126279}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryObject: 0
+  rotationHand: {fileID: 0}
   hand: {fileID: 0}
   throwForce: 0
   dog: {fileID: 0}
+  handGuide: {fileID: 0}
