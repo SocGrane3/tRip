@@ -16,7 +16,7 @@ public class ChangeScene : MonoBehaviour
 
     public void cerrarJuego()
     {
-        EditorApplication.ExecuteMenuItem("Edit/Play");
+     
         Debug.Log("Exited the game");
         Application.Quit();
     }

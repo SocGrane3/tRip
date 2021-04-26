@@ -17,7 +17,7 @@ public class GameManagerLvl1 : MonoBehaviour
     {
         if(gos.transform.position.y < 35)
         {
-            for (int i = 0; i < isla.transform.GetChildCount(); i++)
+            for (int i = 0; i < isla.transform.childCount; i++)
             {
                 if (isla.transform.GetChild(i).GetComponent<Rigidbody>() != null) {
                     isla.transform.GetChild(i).GetComponent<Rigidbody>().useGravity = true;
