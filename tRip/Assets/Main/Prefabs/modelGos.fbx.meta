@@ -4,11 +4,87 @@ ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: 4781951162920444690
-    second: run
+      74: 5364737251917730800
+    second: orejas
   - first:
-      74: -5972132622398978702
-    second: stanBy
+      74: 5978005782212290208
+    second: Armature|Armature.002|Armature|ArmatureAction|Armature|ArmatureAction
+  - first:
+      74: -7475982098165885343
+    second: dogRun
+  - first:
+      74: -8244872012187354290
+    second: Armature|Armature|Armature|Armature.002|Armature|ArmatureAction|Armature
+  - first:
+      74: 8450808836658823645
+    second: Armature|Armature|Armature|ArmatureAction|Armature|ArmatureAction
+  - first:
+      74: 7171530881296095289
+    second: Armature|Armature|Armature|CameDelanteraDreta1Action|Armature|CameDelant
+  - first:
+      74: -3291207254300622875
+    second: Armature|Armature|Armature|CameDelanteraDreta2Action|Armature|CameDelant
+  - first:
+      74: 5885718821932466772
+    second: Armature|Armature|Armature|CameDelanteraDreta3Action|Armature|CameDelant
+  - first:
+      74: -5457035804733807877
+    second: Armature|Armature|Armature|CameDelanteraEsq1Action|Armature|CameDelanter
+  - first:
+      74: -1797075542985130919
+    second: Armature|Armature|Armature|CameDelanteraEsq2Action|Armature|CameDelanter
+  - first:
+      74: -4499102400011629029
+    second: Armature|Armature|Armature|CameDelanteraEsq3Action|Armature|CameDelanter
+  - first:
+      74: 5220840921641249740
+    second: Armature|Armature|Armature|collAction|Armature|collAction
+  - first:
+      74: 4035902271724659144
+    second: Armature|Armature|Armature|cranioAction|Armature|cranioAction
+  - first:
+      74: -5715564663066155291
+    second: Armature|Armature|Armature|mandibula inferiorAction|Armature|mandibula
+      i
+  - first:
+      74: -3427326036606465557
+    second: Armature|Armature|Armature|oreja1Action|Armature|oreja1Action
+  - first:
+      74: 8416205385903888724
+    second: Armature|Armature|Armature|oreja2Action|Armature|oreja2Action
+  - first:
+      74: 7534710508180008724
+    second: Armature|Armature|Armature|piernaDretaAnt1Action|Armature|piernaDretaAnt
+  - first:
+      74: -5151305176029599575
+    second: Armature|Armature|Armature|piernaDretaAnt2Action|Armature|piernaDretaAnt
+  - first:
+      74: -2066028325599317632
+    second: Armature|Armature|Armature|piernaDretaAnt3Action|Armature|piernaDretaAnt
+  - first:
+      74: -1235663907255379706
+    second: Armature|Armature|Armature|piernaEsqAnt1Action|Armature|piernaEsqAnt1Act
+  - first:
+      74: -5591227394308240654
+    second: Armature|Armature|Armature|piernaEsqAnt2Action|Armature|piernaEsqAnt2Act
+  - first:
+      74: -8049588003676841328
+    second: Armature|Armature|Armature|piernaEsqAnt3Action|Armature|piernaEsqAnt3Act
+  - first:
+      74: 8545437103986127071
+    second: Armature|Armature|Armature|torsAction|Armature|torsAction
+  - first:
+      74: -751780774236863459
+    second: Armature|oreja2Action
+  - first:
+      74: -6273462848816141495
+    second: oejas
+  - first:
+      74: 2737840488100992578
+    second: abrirBoca
+  - first:
+      74: 7246711398685894089
+    second: cerrarBoca
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -43,11 +119,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: run
-      takeName: Armature|ArmatureAction
+      name: dogRun
+      takeName: Armature|Armature|ArmatureAction
       internalID: 0
-      firstFrame: 2
-      lastFrame: 87
+      firstFrame: 0
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -72,11 +148,69 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: stanBy
-      takeName: Armature|ArmatureAction
+      name: oejas
+      takeName: Armature|Armature|ArmatureAction
       internalID: 0
-      firstFrame: 0
-      lastFrame: 1
+      firstFrame: 50
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 80
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: abrirBoca
+      takeName: Armature|Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 95
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: cerrarBoca
+      takeName: Armature|Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 120
+      lastFrame: 139
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -105,7 +239,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -118,7 +252,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
+    preserveHierarchy: 1
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
@@ -134,7 +268,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []

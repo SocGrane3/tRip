@@ -6,9 +6,12 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 {
 
     public bool carryObject;
-    public Transform hand;
+    public Animator rotationHand;
+    public Animator hand;
     public float throwForce;
     public GameObject dog;
+    public Transform handGuide;
+    Vector3 scaleOriginal;
 
     public void Selector()
     {
@@ -19,23 +22,28 @@ public class PickAndThrow : MonoBehaviour, ITouchable
     {
         Debug.Log("ball detect man");
 
-        dog.GetComponent<GosPickBall>().carryObject = false;
+        if (dog.GetComponent<GosPickBall>().carryObject){
+            dog.GetComponent<GosPickBall>().carryObject = false;
+            dog.GetComponent<Animator>().SetTrigger("soltar");
+        }
+
+        dog.GetComponent<Perro>().pilotaCatch = true;
+        hand.SetTrigger("pick");
+        this.transform.SetParent(handGuide);
+        this.transform.localScale = handGuide.localScale;
+        this.gameObject.transform.position = handGuide.position;
+        this.GetComponent<Rigidbody>().isKinematic = true;
+        this.GetComponent<Rigidbody>().useGravity = false;
+        dog.GetComponent<AudioSource>().Play();
+
+        Debug.Log("pick"+"\nparent: "+this.transform.parent+"kinematic: "+ this.GetComponent<Rigidbody>().isKinematic+"Gravety: "+ this.GetComponent<Rigidbody>().useGravity);
 
         carryObject = true;
-        if (carryObject)
-        {
-            
-            this.transform.SetParent(hand);
-            this.gameObject.transform.position = hand.position;
-            this.GetComponent<Rigidbody>().isKinematic = true;
-            this.GetComponent<Rigidbody>().useGravity = false;
-        }
-    }
-
+    }  
     // Start is called before the first frame update
     void Start()
     {
-
+        scaleOriginal = transform.localScale;
     }
 
     // Update is called once per frame
@@ -45,20 +53,29 @@ public class PickAndThrow : MonoBehaviour, ITouchable
 
         if (carryObject)
         {
+
             if (Input.GetMouseButton(0) && throwForce < 700)
             {
                 throwForce += 3;
-            }
+                rotationHand.SetBool("cargar", true);
+            }else rotationHand.SetBool("cargar", false);
 
             if (Input.GetMouseButtonUp(0))
             {
-                hand.DetachChildren();
+                rotationHand.SetTrigger("soltar");
+                hand.SetTrigger("throw");
+                dog.GetComponent<AudioSource>().Play();
+                handGuide.DetachChildren();
+                transform.localScale = scaleOriginal;
                 this.GetComponent<Rigidbody>().isKinematic = false;
                 this.GetComponent<Rigidbody>().useGravity = true;
                 this.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * throwForce);
                 carryObject = false;
                 doggy.pilotaCatch = false;
                 throwForce = 0;
+                dog.GetComponent<AudioSource>().Play(2);
+
+                Debug.Log("throw" + "\nparent: " + this.transform.parent + "kinematic: " + this.GetComponent<Rigidbody>().isKinematic + "Gravety: " + this.GetComponent<Rigidbody>().useGravity);
             }
         }
 
@@ -70,4 +87,7 @@ public class PickAndThrow : MonoBehaviour, ITouchable
             this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
     }
+
+    
+
 }

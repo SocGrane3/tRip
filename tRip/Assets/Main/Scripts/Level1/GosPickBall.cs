@@ -33,6 +33,7 @@ public class GosPickBall : MonoBehaviour
                 if (carryObject)
                 {
                     gameObject.GetComponent<Perro>().pilotaCatch = true;
+                    GetComponent<Animator>().SetTrigger("coger");
                     item = hit.collider.gameObject;
                     item.transform.SetParent(boca);
                     item.gameObject.transform.position = boca.position;
