@@ -11,6 +11,10 @@ TagManager:
   - Pantalla1
   - Audio
   - Smoke
+  - mano
+  - FinalColl
+  - Platform
+  - tripp
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - PostProcessing
   - 
   - 
   - 

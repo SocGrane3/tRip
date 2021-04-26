@@ -10,14 +10,14 @@ public class Perro : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform pilota;
     [SerializeField] private float stopDistance;
-    [SerializeField] private Animation animation;
+    [SerializeField] private Animator animation;
     public bool pilotaCatch, corre;
 
     // Start is called before the first frame update
     void Start()
     {
         navigation = GetComponent<NavMeshAgent>();
-        animation = GetComponent<Animation>();
+        animation = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -30,16 +30,14 @@ public class Perro : MonoBehaviour
     public void seguirPilota()
     {
         navigation.destination = pilota.position;
-        animation.Play();
-        corre = true;
+        animation.SetBool("run", true);
     }
 
     public void irAJugador()
     {
         navigation.destination = player.position;
         navigation.stoppingDistance = stopDistance;
-        /*if(navigation.remainingDistance < stopDistance) animation.Play();
-        else animation.Play();*/
-        corre = navigation.remainingDistance < stopDistance;
+        if (navigation.remainingDistance < stopDistance-0.22) animation.SetBool("run", false);
+        else animation.SetBool("run", true);
     }
 }

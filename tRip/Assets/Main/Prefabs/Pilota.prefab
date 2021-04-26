@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 724422928167888754}
   - component: {fileID: 724422928167888749}
   - component: {fileID: 724422928167888753}
+  - component: {fileID: 473633679}
+  - component: {fileID: 473633684}
   m_Layer: 0
   m_Name: Pilota
-  m_TagString: Ball
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 724422928167888748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.88, y: 51.84, z: -74.94}
-  m_LocalScale: {x: 0.086982, y: 0.086982, z: 0.086982}
+  m_LocalScale: {x: 0.026126279, y: 0.026126279, z: 0.026126279}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,3 +112,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &473633679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724422928167888748}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0.9847088, a: 1}
+  outlineWidth: 7
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &473633684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724422928167888748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbfdbc2b66598743adfc6bcc6784f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carryObject: 0
+  rotationHand: {fileID: 0}
+  hand: {fileID: 0}
+  throwForce: 0
+  dog: {fileID: 0}
+  handGuide: {fileID: 0}
