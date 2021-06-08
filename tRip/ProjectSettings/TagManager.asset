@@ -15,6 +15,7 @@ TagManager:
   - FinalColl
   - Platform
   - tripp
+  - PlayerUI
   layers:
   - Default
   - TransparentFX
