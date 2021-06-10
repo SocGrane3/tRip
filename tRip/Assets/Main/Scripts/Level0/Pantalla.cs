@@ -23,16 +23,7 @@ public class Pantalla : MonoBehaviour, ITouchable
     public void onClick()
     {
         videoPlayer.Play();
-        Destroy(GameObject.FindGameObjectWithTag("Pantalla1").transform.gameObject.GetComponent<Outline>());
-        Destroy(this.transform.gameObject.GetComponent<Outline>());
-        if ((ulong)videoPlayer.frame < videoPlayer.frameCount)
-        {
-            
-
-        }
-        else
-        {
-            GameManagerLvl0.pantalla1 = true;
-        }
+        GameManagerLvl0.misEstados = Estados.Pantalla1;
+       
     }
 }

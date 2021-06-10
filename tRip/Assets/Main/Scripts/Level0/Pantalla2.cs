@@ -24,7 +24,7 @@ public class Pantalla2 : MonoBehaviour, ITouchable
     {
         StartCoroutine(coFunc());
         videoPlayer.Play();
-        Destroy(GameObject.FindGameObjectWithTag("Pantalla2").transform.gameObject.GetComponent<Outline>());
+       
         
         
             
@@ -33,6 +33,6 @@ public class Pantalla2 : MonoBehaviour, ITouchable
     IEnumerator coFunc()
     {
         yield return new WaitForSeconds(3);
-        GameManagerLvl0.pantalla2 = true;
+        GameManagerLvl0.misEstados = Estados.Pantalla2;
     }
 }

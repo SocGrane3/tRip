@@ -21,7 +21,7 @@ public class Personatge : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (this.gameObject.transform.position.y < -100) nextScene();
+        if (this.gameObject.transform.position.y < -130) nextScene();
     }
 
     public void nextScene()

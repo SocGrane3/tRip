@@ -35,21 +35,31 @@ public class PauseMenu : MonoBehaviour
         menuPausaUI.SetActive(false);
         Time.timeScale = 1f;
         Cursor.visible = false;
-        if (cursor != null) cursor.SetActive(true);
+        if (cursor != null)
+        {
+            Debug.Log("Cursor detectado");
+            cursor.SetActive(true);
+        }
         Cursor.lockState = CursorLockMode.Locked;
         juegoPausado = false;
+        Debug.Log("Reanudado");
 
 
     }
 
-    void Pausar()
+    public void Pausar()
     {
         menuPausaUI.SetActive(true);
         Time.timeScale = 0f;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        if (cursor != null) cursor.SetActive(false);
+        if (cursor != null)
+        {
+            Debug.Log("Cursor detectado");
+            cursor.SetActive(false);
+        }
         juegoPausado = true;
+        Debug.Log("Pausado");
     }
 
     public void ReiniciarNivel()

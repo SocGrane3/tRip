@@ -43,6 +43,13 @@ public class SelectObject : MonoBehaviour
                 }
                 
             }
+            else if(objeto.GetComponent<IMovible>() != null)
+            {
+                ultimoObjeto = tocado.transform.gameObject;
+                puntero.color = Color.green;
+                ultimoObjeto.GetComponent<Outline>().enabled = true;
+                
+            }
             else
             {
                 puntero.color = Color.white;
